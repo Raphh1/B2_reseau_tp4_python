@@ -2,7 +2,7 @@ import socket
 from sys import exit
 
 # On définit la destination de la connexion
-host = '<IP_du_serveur>'  # IP du serveur
+host = '192.168.185.4'  # IP du serveur
 port = 13337             # Port choisir par le serveur
 
 # Création de l'objet socket de type TCP (SOCK_STREAM)
