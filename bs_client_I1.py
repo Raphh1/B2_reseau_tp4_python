@@ -1,5 +1,5 @@
 import socket
-import sys
+from sys import exit
 
 # On définit la destination de la connexion
 host = '<IP_du_serveur>'  # IP du serveur
