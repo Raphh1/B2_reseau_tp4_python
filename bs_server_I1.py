@@ -1,5 +1,5 @@
 import socket
-
+import sys
 # On choisit une IP et un port où on va écouter
 host = '' # string vide signifie, dans ce conetxte, toutes les IPs de la machine
 port = 13337 # port choisi arbitrairement
@@ -40,3 +40,5 @@ while True:
 
 # On ferme proprement la connexion TCP
 conn.close()
+
+exit(0)
