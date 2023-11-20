@@ -32,11 +32,11 @@ while True:
 
 
         if ('meo' in data.decode("utf-8")):
-            conn.sendall("Meo a toi confrere" .encode("utf-8"))
+            conn.sendall("Meo a toi confrere".encode("utf-8"))
         elif ('waf' in data.decode("utf-8")):
-            conn.sendall("ptdr t ki ?" .encode("utf-8"))
+            conn.sendall("ptdr t ki ?".encode("utf-8"))
         else:
-            conn.sendall("Mes respect humble humain" .encode("utf-8"))
+            conn.sendall("Mes respect humble humain".encode("utf-8"))
 
         
         conn.sendall("Hi mate !")
