@@ -1,5 +1,5 @@
 import socket
-from sys import exit
+
 
 host = ''
 port = 13337 
