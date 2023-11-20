@@ -36,7 +36,7 @@ while True:
         if not data: break
 
         
-        print(f"Données reçues du client : {data}")
+        print(f"Données reçues du client : {data.decode('utf-8')}")
 
         
         conn.sendall("Hi mate !")
