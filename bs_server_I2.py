@@ -8,29 +8,19 @@ port = 13337
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-s.bind((host, port))  
-
-
-s.listen(1)
-
-conn, addr = s.accept()
-
-print('Connected by', addr)
-
-
-while True:
-
-    try:
+try:
         s.bind((host, port))  
         s.listen(1)
         conn, addr = s.accept()
         print(f"Un client vient de se co et son IP c'est {addr[0]}")
-    except:
+except:
         print("la connexion a échoué tant pis")
+
+
+while True:
+
+    
         
-
-
-
     try:
         if ('meo' in data.decode("utf-8")):
             conn.sendall("Meo a toi confrere" .encode("utf-8"))
