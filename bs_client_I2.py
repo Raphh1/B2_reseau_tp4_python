@@ -8,7 +8,16 @@ port = 13337
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-s.connect((host, port))
+
+try:
+    print(f"Connecté avec succès au serveur {host} sur le port {port}")
+    s.connect((host, port))
+    message = input('Que veux-tu envoyer au serveur : ')
+except:
+    print("il semble y avoir une erreur")
+    exit()
+
+
 
 
 s.sendall(b'Meooooo !')
