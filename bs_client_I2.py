@@ -15,7 +15,7 @@ try:
     message = input("Que veux-tu envoyer au serveur : ")
 except:
     print("il semble y avoir une erreur")
-    exit()
+    exit(1)
 
 
 

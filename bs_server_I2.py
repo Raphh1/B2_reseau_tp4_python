@@ -13,23 +13,15 @@ try:
         s.listen(1)
         conn, addr = s.accept()
         print(f"Un client vient de se co et son IP c'est {addr[0]}")
-except:
+except socket.error:
         print("la connexion a échoué tant pis")
-
+        exit(1)
 
 while True:
 
-    
-        
     try:
-        if ('meo' in data.decode("utf-8")):
-            conn.sendall("Meo a toi confrere" .encode("utf-8"))
-        elif ('waf' in data.decode("utf-8")):
-            conn.sendall("ptdr t ki ?" .encode("utf-8"))
-        else:
-            conn.sendall("Mes respect humble humain" .encode("utf-8"))
 
-
+        
         data = conn.recv(1024)
 
         
@@ -37,6 +29,14 @@ while True:
 
         
         print(f"Données reçues du client : {data.decode('utf-8')}")
+
+
+        if ('meo' in data.decode("utf-8")):
+            conn.sendall("Meo a toi confrere" .encode("utf-8"))
+        elif ('waf' in data.decode("utf-8")):
+            conn.sendall("ptdr t ki ?" .encode("utf-8"))
+        else:
+            conn.sendall("Mes respect humble humain" .encode("utf-8"))
 
         
         conn.sendall("Hi mate !")
@@ -47,5 +47,3 @@ while True:
 
 
 conn.close()
-
-exit(0)
