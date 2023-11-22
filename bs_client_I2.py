@@ -10,12 +10,12 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 
 try:
-    print(f"Connecté avec succès au serveur {host} sur le port {port}")
-    s.connect((host, port))
-    message = input("Que veux-tu envoyer au serveur : ")
-except:
-    print("il semble y avoir une erreur")
-    exit(1)
+        print(f"Connecté avec succès au serveur {host} sur le port {port}")
+        s.connect((host, port))
+        message = input("Que veux-tu envoyer au serveur : ")
+except socket.error:
+        print("il semble y avoir une erreur")
+        exit(1)
 
 
 
