@@ -17,8 +17,6 @@ def serveur():
     serveur_socket.bind(('192.168.185.4', 13337))
     serveur_socket.listen(5)
 
-    print("Le serveur écoute sur le port 12345...")
-
     while True:
         client_socket, _ = serveur_socket.accept()
         print("Nouvelle connexion reçue.")
